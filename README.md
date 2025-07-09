@@ -1,6 +1,8 @@
 # OCR to PDF Converter
 
-Persian OCR text extraction and PDF generation tool using FPDF with full Persian language support.
+**Employment Task Project**: Persian OCR text extraction and PDF generation tool using FPDF with full Persian language support.
+
+> **Note**: This project was developed as a text extraction task assigned to me for employment purposes. It demonstrates my skills in Python development, API integration, Persian text processing, and PDF generation.
 
 ## 🌟 Features
 
@@ -23,8 +25,8 @@ Persian OCR text extraction and PDF generation tool using FPDF with full Persian
 
 ```bash
 # Clone the repository
-git clone <repository-url>
-cd ocr-pdf-converter
+git clone https://github.com/YOUR_USERNAME/ocr-pdf-persian.git
+cd ocr-pdf-persian
 
 # Install dependencies
 pip install -r requirements.txt
@@ -52,7 +54,7 @@ The tool will:
 ## 📁 Project Structure
 
 ```
-ocr-pdf-converter/
+ocr-pdf-persian/
 ├── pdf_generator.py          # Main application file
 ├── ocr_improved.py          # OCR API integration
 ├── requirements.txt         # Python dependencies
@@ -128,6 +130,34 @@ files = {'document': (filename, file_obj, 'application/pdf')}
 response = requests.post(api_url, headers=headers, files=files)
 ```
 
+## 🎯 Technical Skills Demonstrated
+
+This employment task project showcases the following technical competencies:
+
+### Programming & Development
+- **Python Programming**: Object-oriented design, error handling, modular code structure
+- **File I/O Operations**: Batch processing of PDF files, directory management
+- **API Integration**: RESTful API consumption, HTTP requests with proper headers
+- **Unicode & Text Processing**: Complex text manipulation for right-to-left languages
+
+### Specialized Libraries & Tools
+- **PDF Generation**: Custom FPDF implementation with Persian text support
+- **Text Processing**: Arabic reshaper and bidirectional text algorithm implementation
+- **Font Management**: Dynamic font loading and fallback mechanisms
+- **HTTP Requests**: Robust API communication with timeout and error handling
+
+### International Text Support
+- **Persian/Farsi Language**: Full RTL text rendering and display
+- **Arabic Reshaping**: Proper character joining and text shaping
+- **Bidirectional Text**: Correct text direction handling for mixed content
+- **Font Integration**: Custom font loading for non-Latin scripts
+
+### Software Engineering Practices
+- **Code Organization**: Clean, maintainable, and well-documented code
+- **Error Handling**: Comprehensive exception management and user feedback
+- **User Experience**: Clear console output with progress indicators and emojis
+- **Documentation**: Bilingual documentation (English/Persian) with examples
+
 ## 🛠️ Dependencies
 
 - **fpdf2**: PDF generation with Unicode support
@@ -163,7 +193,14 @@ response = requests.post(api_url, headers=headers, files=files)
 
 ## 📄 License
 
-This project is open source. Feel free to use and modify according to your needs.
+This project was developed as an employment task to demonstrate technical skills in:
+- Python programming and file handling
+- API integration and HTTP requests
+- Persian/Arabic text processing and bidirectional text
+- PDF generation with Unicode support
+- Error handling and user experience design
+
+Feel free to use and modify according to your needs for educational or commercial purposes.
 
 ## 🤝 Contributing
 
