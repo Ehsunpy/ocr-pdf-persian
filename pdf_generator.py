@@ -33,7 +33,7 @@ def get_persian_font():
     
     for font_path in font_paths:
         if os.path.exists(font_path):
-            print(f"✅ Persian font found: {font_path}")
+            print(f"Persian font found: {font_path}")
             return font_path
     
     print("❌ No Persian font found - using fallback mode")
@@ -54,9 +54,9 @@ class PersianPDF(FPDF):
             try:
                 self.add_font('IRANSans', '', self.font_path)
                 self.has_persian_font = True
-                print("✅ Persian font loaded successfully")
+                print(" Persian font loaded successfully")
             except Exception as e:
-                print(f"❌ Error loading Persian font: {e}")
+                print(f" Error loading Persian font: {e}")
                 self.has_persian_font = False
         else:
             self.has_persian_font = False
@@ -232,19 +232,19 @@ def create_pdf_report(extracted_texts, pdf_files, output_filename="ocr_results.p
     # Save the PDF
     try:
         pdf.output(output_path)
-        print(f"✅ PDF report created successfully: {output_path}")
+        print(f"PDF report created successfully: {output_path}")
         return output_path
     except Exception as e:
-        print(f"❌ Error creating PDF report: {e}")
+        print(f" Error creating PDF report: {e}")
         return None
 
 def main():
     """Main function to run OCR and generate PDF report"""
-    print("🚀 Starting OCR to PDF process...")
+    print(" Starting OCR to PDF process...")
     
     # Test connection first
     if not test_connection():
-        print("❌ Cannot connect to API. Please check your internet connection.")
+        print(" Cannot connect to API. Please check your internet connection.")
         return
     
     api_url = "https://alefba.roshan-ai.ir/api/read_document/"
@@ -258,27 +258,27 @@ def main():
         for filename in os.listdir(pdfs_dir):
             if filename.lower().endswith('.pdf'):
                 pdf_files.append(os.path.join(pdfs_dir, filename))
-        print(f"📁 Found {len(pdf_files)} PDF files in {pdfs_dir} directory")
+        print(f" Found {len(pdf_files)} PDF files in {pdfs_dir} directory")
     else:
-        print(f"❌ Directory {pdfs_dir} not found!")
+        print(f" Directory {pdfs_dir} not found!")
         return
     
     if not pdf_files:
-        print("❌ No PDF files found in the pdfs directory!")
+        print(" No PDF files found in the pdfs directory!")
         return
     
     # Process PDFs with OCR
-    print("\n🔍 Starting OCR processing...")
+    print(" Starting OCR processing...")
     extracted_texts = ocr_pdfs(pdf_files, api_url, token)
     
     # Create PDF report
-    print("\n📄 Creating PDF report...")
+    print(" PDF report...")
     output_file = create_pdf_report(extracted_texts, pdf_files)
     
     if output_file:
-        print(f"\n✨ Process completed! PDF report saved as: {output_file}")
+        print(f" Process completed! PDF report saved as: {output_file}")
     else:
-        print("\n❌ Failed to create PDF report!")
+        print(" Failed to create PDF report!")
 
 if __name__ == "__main__":
     main()
