@@ -10,7 +10,6 @@
 - **OCR Integration**: Automatic text extraction from PDF files using Alefba OCR API
 - **Font Management**: Automatic detection and loading of Persian fonts (IRANSans)
 - **PDF Generation**: Clean PDF reports with extracted text
-- **Fallback Mode**: Works even without Persian fonts (with transliteration)
 - **Batch Processing**: Process multiple PDF files simultaneously
 
 ## 📋 Requirements
@@ -25,8 +24,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/ocr-pdf-persian.git
-cd ocr-pdf-persian
+cd <project-directory>
 
 # Install dependencies
 pip install -r requirements.txt
@@ -42,20 +40,19 @@ pip install -r requirements.txt
 
 ```bash
 # Run the OCR and PDF generation process
-python pdf_generator.py
+python task.py
 ```
 
 The tool will:
 1. 🔍 Find all PDF files in `pdfs/` directory
 2. 📡 Send them to OCR API for text extraction
-3. 📄 Generate a comprehensive PDF report
-4. 💾 Save the result in `extracted_texts/ocr_results.pdf`
+3. 📄 Generate a PDF report with extracted text
 
 ## 📁 Project Structure
 
 ```
 ocr-pdf-persian/
-├── pdf_generator.py          # Main application file
+├── task.py                  # Main application file
 ├── ocr_improved.py          # OCR API integration
 ├── requirements.txt         # Python dependencies
 ├── fonts/                   # Persian font files
@@ -87,11 +84,11 @@ Supported font paths (searched in order):
 ### Basic Usage
 ```bash
 # Process all PDFs in pdfs/ directory
-python pdf_generator.py
+python task.py
 ```
 
 ### Custom Processing
-You can modify `pdf_generator.py` to:
+You can modify `task.py` to:
 - Change output filename
 - Modify PDF formatting
 - Add custom text processing
