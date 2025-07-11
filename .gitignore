@@ -8,7 +8,9 @@ __pycache__/
 .venv/
 venv/
 env/
-
+vscode
+venv1/
+venv1
 # Project specific
 extracted_texts/
 pdfs/
